@@ -16,20 +16,20 @@ type Props = {
   inputValue: string;
 };
 
-const Multipler: FunctionComponent<Props> = ({ inputValue }) => {
+const Multiplier: FunctionComponent<Props> = ({ inputValue }) => {
   const itemsToRender = parseInt(inputValue);
 
   return (
     <div className="Multiplier">
-      <div className="Multipler__Main">
+      <div className="Multiplier__Main">
         {inputValue.length >= 1 &&
           new Array(itemsToRender).fill("item").map((child, index) => (
             <div
               key={`.${index}`}
-              className={`Multipler__Block ${
+              className={`Multiplier__Block ${
                 (index + 1) % 2 === 0
-                  ? "Multipler__Block--even"
-                  : "Multipler__Block--odd"
+                  ? "Multiplier__Block--even"
+                  : "Multiplier__Block--odd"
                 }`}
             >
               {index + 1}
@@ -43,7 +43,7 @@ const Multipler: FunctionComponent<Props> = ({ inputValue }) => {
   );
 };
 
-// Multipler.propTypes = propTypes;
-// Multipler.defaultProps = defaultProps;
+// Multiplier.propTypes = propTypes;
+// Multiplier.defaultProps = defaultProps;
 
-export default Multipler;
+export default Multiplier;

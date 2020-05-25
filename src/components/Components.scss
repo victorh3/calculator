@@ -21,11 +21,11 @@ $blockColor: #6b717f;
   margin-bottom: 2rem;
 }
 
-.Multipler__Main {
+.Multiplier__Main {
   padding: 1.5rem 1rem;
 }
 
-.Multipler__Block {
+.Multiplier__Block {
   text-align: center;
   padding: .25rem;
   margin-bottom: .25rem;
@@ -36,7 +36,7 @@ $blockColor: #6b717f;
   }
 }
 
-.Multipler__Block--odd {
+.Multiplier__Block--odd {
   background-color: lighten($blockColor, 20%);
 
 }
