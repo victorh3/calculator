@@ -1,0 +1,42 @@
+// Block__Element--Modifier
+
+$blockColor: #6b717f;
+
+.Input {
+  background-color: lightblue;
+  padding: 1.5rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.Input__Field {
+  width: 100%;
+  padding: .25rem .5rem;
+  box-sizing: border-box;
+}
+
+.Multiplier {
+  background-color: red;
+  height: 18.75rem;
+  overflow-y: auto;
+  margin-bottom: 2rem;
+}
+
+.Multipler__Main {
+  padding: 1.5rem 1rem;
+}
+
+.Multipler__Block {
+  text-align: center;
+  padding: .25rem;
+  margin-bottom: .25rem;
+  background-color: $blockColor;
+
+  &:last-child {
+    margin-bottom: 0;  
+  }
+}
+
+.Multipler__Block--odd {
+  background-color: lighten($blockColor, 20%);
+
+}
