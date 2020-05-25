@@ -1,0 +1,21 @@
+// Block__Element--Modifier
+
+.Header {
+  position: fixed;
+  top: 0;
+  left:0;
+  right: 0;
+  background-color: grey;
+  padding: 2rem 1rem;
+}
+
+.Body {
+  margin-top: 5.5rem;
+  padding: 1rem;
+}
+
+.Footer {
+  background-color: grey;
+  height: 8rem;
+  padding: 2rem 1rem;
+}
