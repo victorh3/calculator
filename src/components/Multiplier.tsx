@@ -16,8 +16,10 @@ type Props = {
   inputValue: string;
 };
 
+const multiplier = process.env.REACT_APP_MULTIPLIER || "1";
+
 const Multiplier: FunctionComponent<Props> = ({ inputValue }) => {
-  const itemsToRender = parseInt(inputValue);
+  const itemsToRender = parseInt(inputValue) * parseInt(multiplier);
 
   return (
     <div className="Multiplier">

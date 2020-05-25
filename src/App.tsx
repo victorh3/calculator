@@ -1,6 +1,6 @@
-import React, { FunctionComponent, useState, useEffect } from "react";
+import React, { FunctionComponent, useState } from "react";
 import "./App.scss";
-import { Input, Multiplier } from "./components";
+import { Input, Multiplier, Computed } from "./components";
 import { Header, Body, Footer } from "./layout";
 
 const App: FunctionComponent = () => {
@@ -8,7 +8,9 @@ const App: FunctionComponent = () => {
 
   // useEfect hook to check/validate input
   // useEffect(() => {
-  //   if (!inputValue) setInputValue("0");
+  //   const multiplier = 2;
+  //   const inputValueNumber = parseInt(inputValue) * multiplier;
+  //   setInputValue(inputValueNumber.toString());
   // }, [inputValue]);
 
   return (
@@ -17,6 +19,7 @@ const App: FunctionComponent = () => {
       <Body>
         <Input inputValue={inputValue} setInputValue={setInputValue} />
         <Multiplier inputValue={inputValue} />
+        <Computed inputValue={inputValue} />
       </Body>
       <Footer />
     </div>
