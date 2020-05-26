@@ -57,14 +57,20 @@
 .Multiplier__Main {
   background-color: $color-white;
   border: .125rem solid $color-border;
+  bottom: 0;
+  left: 0;
+  margin: 1.5rem 1rem;
+  overflow-y: scroll;
   padding: 1.5rem 1rem;
-  
-  @include bp-tablet {
-    left: 0;
-    margin: 1.5rem 1rem;
-    position: absolute;
-    right: 0;
-    top: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  // Hide the scroll bar for IE and Edge but keep functionality
+  -ms-overflow-style: none;
+  // Hide the scroll bar for Chrome, Safari, and Opera but keep functionality
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 

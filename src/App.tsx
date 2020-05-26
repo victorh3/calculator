@@ -4,7 +4,7 @@ import { Input, Multiplier, Computed } from "./components";
 import { Header, Body, Footer } from "./layout";
 
 const App: FunctionComponent = () => {
-  const [inputValue, setInputValue] = useState("10");
+  const [inputValue, setInputValue] = useState("3");
 
   // useEfect hook to check/validate input
   // useEffect(() => {

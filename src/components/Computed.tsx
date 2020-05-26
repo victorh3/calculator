@@ -23,7 +23,9 @@ const multiplier = process.env.REACT_APP_MULTIPLIER || "1";
 const Computed: FunctionComponent<Props> = ({ inputValue }) => {
   const itemsToRender = parseInt(inputValue) * parseInt(multiplier);
 
-  return <div className="Computed">{itemsToRender}</div>;
+  return (
+    <div className="Computed">{inputValue !== "" ? itemsToRender : null}</div>
+  );
 };
 
 // Computed.propTypes = propTypes;

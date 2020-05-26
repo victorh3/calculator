@@ -21,7 +21,10 @@ type Props = {
 const Input: FunctionComponent<Props> = ({ inputValue, setInputValue }) => {
   const handleOnChange = (e: React.FormEvent<HTMLInputElement>): void => {
     const value: string = e.currentTarget.value;
-    setInputValue(value);
+    const numberPattern = /\d+/g;
+    const sanitizedString: string[] | null = value.match(numberPattern) || [""];
+    console.log(sanitizedString);
+    setInputValue(sanitizedString.join(""));
   };
 
   const elementId = "number-input";
@@ -30,13 +33,11 @@ const Input: FunctionComponent<Props> = ({ inputValue, setInputValue }) => {
     <div className="Input">
       <label htmlFor={elementId}>Enter a Number</label>
       <input
-        id={elementId}
         className="Input__Field"
-        type="number"
+        id={elementId}
         min="0"
-        placeholder="Enter number"
-        value={inputValue}
         onChange={handleOnChange}
+        value={inputValue}
       />
     </div>
   );
