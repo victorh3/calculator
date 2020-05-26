@@ -17,10 +17,10 @@
   
   @include bp-tablet {
     display: grid;
-    grid-gap: 1rem;
+    grid-template-columns: 25% 25% 25% 25%;
     grid-template-areas:
-      'Input Input Input Computed Computed Computed'
-      'Multiplier Multiplier Multiplier Computed Computed Computed';
+    'Input Input Computed Computed'
+    'Multiplier Multiplier Computed Computed';
   }
   
   @include bp-desktop {
