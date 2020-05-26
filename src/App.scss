@@ -2,10 +2,11 @@
 @import './utilities.scss';
 
 .App {
-  display: flex;
-  flex-direction: column;
-
+  min-width: 20rem;
   @include bp-tablet {
+    min-height: 48rem;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
   }
 }

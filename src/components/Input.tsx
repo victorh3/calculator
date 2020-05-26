@@ -24,9 +24,13 @@ const Input: FunctionComponent<Props> = ({ inputValue, setInputValue }) => {
     setInputValue(value);
   };
 
+  const elementId = "number-input";
+
   return (
     <div className="Input">
+      <label htmlFor={elementId}>Enter a Number</label>
       <input
+        id={elementId}
         className="Input__Field"
         type="number"
         min="0"

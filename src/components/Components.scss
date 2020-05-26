@@ -10,8 +10,12 @@ $blockColor: #6b717f;
   grid-area: Input;
   
   @include bp-tablet {
-    margin-right: .5rem;
     margin-bottom: .5rem;
+    margin-right: .5rem;
+  }
+
+  @include bp-desktop {
+    margin-bottom: 0;
   }
 }
 
@@ -24,9 +28,11 @@ $blockColor: #6b717f;
 .Multiplier {
   background-color: red;
   height: 18.75rem;
+  max-height: 64rem;
   overflow-y: auto;
   margin-bottom: 2rem;
   grid-area: Multiplier;
+  position: relative;
   
   @include bp-tablet {
     margin-bottom: 0;
@@ -43,6 +49,13 @@ $blockColor: #6b717f;
 
 .Multiplier__Main {
   padding: 1.5rem 1rem;
+
+  @include bp-tablet {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
 }
 
 .Multiplier__Block {
