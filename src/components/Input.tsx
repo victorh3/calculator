@@ -8,7 +8,9 @@ import React, { FunctionComponent } from "react";
 
 // const defaultProps = {
 //   inputValue: 0,
-//   setInputValue: (): void => { },
+//   setInputValue: (): void => {
+//     // do nothing
+//   },
 // };
 
 type Props = {
@@ -23,19 +25,6 @@ const Input: FunctionComponent<Props> = ({ inputValue, setInputValue }) => {
   };
 
   return (
-    // <Form.Group controlId="calculatorInputNumber" className="Input">
-    //   <Form.Label>Enter a number</Form.Label>
-    //   <Form.Control
-    //     type="number"
-    //     min="0"
-    //     placeholder="Enter number"
-    //     value={inputValue}
-    //     onChange={handleOnChange}
-    //   />
-    //   <Form.Text className="text-muted">
-    //     Limit is {Number.MAX_SAFE_INTEGER}
-    //   </Form.Text>
-    // </Form.Group>
     <div className="Input">
       <input
         className="Input__Field"

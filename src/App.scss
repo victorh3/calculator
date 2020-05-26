@@ -1,3 +1,11 @@
-.App {
+// Block__Element--Modifier
+@import './utilities.scss';
 
+.App {
+  display: flex;
+  flex-direction: column;
+
+  @include bp-tablet {
+    height: 100vh;
+  }
 }

@@ -8,8 +8,10 @@ import "./Components.scss";
 // };
 
 // const defaultProps = {
-//   inputValue: 0,
-//   setInputValue: (): void => { },
+//   inputValue: "0",
+//   setInputValue: (): void => {
+//     // do nothing
+//   },
 // };
 
 type Props = {

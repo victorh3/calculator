@@ -9,7 +9,9 @@ import "./Components.scss";
 
 // const defaultProps = {
 //   inputValue: 0,
-//   setInputValue: (): void => { },
+//   setInputValue: (): void => {
+//     // do nothing
+//   },
 // };
 
 type Props = {
