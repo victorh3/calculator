@@ -1,16 +1,46 @@
 // Block__Element--Modifier
 @import '../utilities.scss';
 
-.Header {
-  position: fixed;
-  top: 0;
-  left:0;
-  right: 0;
-  background-color: grey;
-  padding: 1rem;
-  height: $header-height;
+.Header, 
+.Footer {
+  background-color: $color-grey;
   box-sizing: border-box;
-  z-index: 10;
+  color: $color-dark-grey;
+  height: $header-height;
+  padding: 1rem;
+}
+
+.Header {
+  border-bottom: .125rem solid $color-border;
+  left:0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.Footer {
+  border-top: .125rem solid $color-border;
+}
+
+.Header__Title,
+.Footer__Title  {
+  margin: 0;
+}
+
+.Header__Title--mobile, 
+.Footer__Title--mobile  {
+  @include bp-tablet {
+    display: none;
+  }
+}
+
+.Header__Title--desktop, 
+.Footer__Title--desktop  {
+  display: none;
+
+  @include bp-tablet {
+    display: block;
+  }
 }
 
 .Body {
@@ -27,14 +57,8 @@
   }
   
   @include bp-desktop {
-    grid-template-rows: 1fr;
     grid-template-areas:
       'Input Computed Computed Multiplier';
+    grid-template-rows: 1fr;
   }
-}
-
-.Footer {
-  background-color: grey;
-  height: 8rem;
-  padding: 2rem 1rem;
 }

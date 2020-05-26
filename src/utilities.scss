@@ -1,5 +1,11 @@
-$tablet-width: 768px;
 $desktop-width: 1024px;
+$tablet-width: 768px;
+
+$color-border: #A9A9A9;
+$color-dark-grey: #B0B0B0;
+$color-grey: #D9D9D9;
+$color-text: #646464;
+$color-white: #FFFFFF;
 $header-height: 4rem;
 
 @mixin bp-tablet {

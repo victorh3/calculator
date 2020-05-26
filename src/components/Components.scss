@@ -1,13 +1,14 @@
 // Block__Element--Modifier
 @import '../utilities.scss';
 
-$blockColor: #6b717f;
-
 .Input {
-  background-color: lightblue;
-  padding: 1.5rem 1rem;
-  margin-bottom: 2rem;
+  background-color: $color-grey;
+  border: .125rem solid $color-border;
+  color: $color-text;
+  font-weight: 500;
   grid-area: Input;
+  margin-bottom: 2rem;
+  padding: 1.5rem 1rem;
   
   @include bp-tablet {
     margin-bottom: .5rem;
@@ -20,49 +21,62 @@ $blockColor: #6b717f;
 }
 
 .Input__Field {
-  width: 100%;
-  padding: .25rem .5rem;
   box-sizing: border-box;
+  color: $color-text;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: .75rem;
+  padding: .25rem .5rem;
+  width: 100%;
 }
 
 .Multiplier {
-  background-color: red;
-  height: 18.75rem;
+  background-color: $color-grey;
+  border: .125rem solid $color-border;
+  grid-area: Multiplier;
+  height: 30rem;
+  margin-bottom: 2rem;
   max-height: 64rem;
   overflow-y: auto;
-  margin-bottom: 2rem;
-  grid-area: Multiplier;
+  padding: 1.5rem 1rem;
   position: relative;
   
   @include bp-tablet {
+    height: auto;
     margin-bottom: 0;
     margin-right: .5rem;
     margin-top: .5rem;
-    height: auto;
   }
 
   @include bp-desktop {
-    margin: 0;
     margin-left: .5rem;
+    margin: 0;
   }
 }
 
 .Multiplier__Main {
+  background-color: $color-white;
+  border: .125rem solid $color-border;
   padding: 1.5rem 1rem;
-
+  
   @include bp-tablet {
-    position: absolute;
-    top: 0;
-    right: 0;
     left: 0;
+    margin: 1.5rem 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 }
 
 .Multiplier__Block {
+  background-color: $color-grey;
+  border: .125rem solid $color-border;
+  color: $color-text;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: .50rem;
+  padding: .50rem .25rem;
   text-align: center;
-  padding: .25rem;
-  margin-bottom: .25rem;
-  background-color: $blockColor;
   
   &:last-child {
     margin-bottom: 0;  
@@ -70,21 +84,27 @@ $blockColor: #6b717f;
 }
 
 .Multiplier__Block--odd {
-  background-color: lighten($blockColor, 20%);
+  background-color: lighten($color-grey, 12.5%);
 }
 
 .Computed {
-  padding: 1.5rem 1rem;
-  background-color: green;
-  text-align: center;
-  height: 10rem;
-  line-height: 10rem;
+  background-color: $color-grey;
+  border: .125rem solid $color-border;
+  color: $color-text;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 10rem;
+  font-weight: 700;
   grid-area: Computed;
+  height: 15rem;
+  line-height: 10rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
   
   @include bp-tablet {
+    height: auto;
     margin-left: .5rem;
     margin-right: .5rem;
-    height: auto;
   }
 }
