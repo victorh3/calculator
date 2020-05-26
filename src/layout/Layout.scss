@@ -14,12 +14,18 @@
 
 .Body {
   padding: ($header-height + 1rem) 1rem 1rem 1rem;
-  display: flex;
-  flex-direction: column;
-
+  
   @include bp-tablet {
-    flex-direction: row;
-    flex: 1;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas:
+      'Input Input Input Computed Computed Computed'
+      'Multiplier Multiplier Multiplier Computed Computed Computed';
+  }
+  
+  @include bp-desktop {
+    grid-template-areas:
+      'Input Computed Computed Multiplier';
   }
 }
 
