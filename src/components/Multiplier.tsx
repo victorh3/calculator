@@ -1,7 +1,6 @@
 import React, { FunctionComponent } from "react";
 import "./Components.scss";
 import Block from "./Block";
-import "react-virtualized/styles.css";
 // import PropTypes from "prop-types";
 
 // const propTypes = {
