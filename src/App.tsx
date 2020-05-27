@@ -6,13 +6,6 @@ import { Header, Body, Footer } from "./layout";
 const App: FunctionComponent = () => {
   const [inputValue, setInputValue] = useState("3");
 
-  // useEfect hook to check/validate input
-  // useEffect(() => {
-  //   const multiplier = 2;
-  //   const inputValueNumber = parseInt(inputValue) * multiplier;
-  //   setInputValue(inputValueNumber.toString());
-  // }, [inputValue]);
-
   return (
     <div className="App">
       <Header />

@@ -5,6 +5,7 @@ const Footer: FunctionComponent = () => {
   return (
     <footer className="Footer">
       <h2 className="Footer__Title">
+        {/* Shorthand to single letter in mobile view. */}
         <span className="Footer__Title--mobile">F</span>
         <span className="Footer__Title--desktop">Footer</span>
       </h2>
