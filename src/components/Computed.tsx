@@ -1,18 +1,10 @@
-import React, { FunctionComponent } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 import "./Components.scss";
-// import PropTypes from "prop-types";
 
-// const propTypes = {
-//   inputValue: PropTypes.string,
-//   setInputValue: PropTypes.func,
-// };
-
-// const defaultProps = {
-//   inputValue: "0",
-//   setInputValue: (): void => {
-//     // do nothing
-//   },
-// };
+const propTypes = {
+  inputValue: PropTypes.string.isRequired,
+};
 
 type Props = {
   inputValue: string;
@@ -21,7 +13,8 @@ type Props = {
 // Defined in env file so that it can be changed at the root and defined once since other component needs it. If not defined, default to 2 as requested..
 const multiplier = process.env.REACT_APP_MULTIPLIER || "2";
 
-const Computed: FunctionComponent<Props> = ({ inputValue }) => {
+const Computed: React.SFC<Props> = (props) => {
+  const { inputValue } = props;
   const itemsToRender = parseInt(inputValue) * parseInt(multiplier);
 
   return (
@@ -30,7 +23,6 @@ const Computed: FunctionComponent<Props> = ({ inputValue }) => {
   );
 };
 
-// Computed.propTypes = propTypes;
-// Computed.defaultProps = defaultProps;
+Computed.propTypes = propTypes;
 
 export default Computed;

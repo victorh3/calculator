@@ -1,18 +1,11 @@
-import React, { FunctionComponent } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 import { DebounceInput } from "react-debounce-input";
-// import PropTypes from "prop-types";
 
-// const propTypes = {
-//   inputValue: PropTypes.string,
-//   setInputValue: PropTypes.func,
-// };
-
-// const defaultProps = {
-//   inputValue: 0,
-//   setInputValue: (): void => {
-//     // do nothing
-//   },
-// };
+const propTypes = {
+  inputValue: PropTypes.string.isRequired,
+  setInputValue: PropTypes.func.isRequired,
+};
 
 type Props = {
   inputValue: string;
@@ -20,7 +13,7 @@ type Props = {
 };
 
 // Use a debounced input so that the onChange function is called at least 1 second AFTER the user is done typing. Increase performance. Can easily be swapped with and HTML input element.
-const Input: FunctionComponent<Props> = ({ inputValue, setInputValue }) => {
+const Input: React.SFC<Props> = ({ inputValue, setInputValue }) => {
   const elementId = "number-input";
 
   const handleOnChange = (e: { target: { value: string } }): void => {
@@ -47,7 +40,6 @@ const Input: FunctionComponent<Props> = ({ inputValue, setInputValue }) => {
   );
 };
 
-// Input.propTypes = propTypes;
-// Input.defaultProps = defaultProps;
+Input.propTypes = propTypes;
 
 export default Input;

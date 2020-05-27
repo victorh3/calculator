@@ -1,19 +1,11 @@
-import React, { FunctionComponent } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 import "./Components.scss";
 import Block from "./Block";
-// import PropTypes from "prop-types";
 
-// const propTypes = {
-//   inputValue: PropTypes.string,
-//   setInputValue: PropTypes.func,
-// };
-
-// const defaultProps = {
-//   inputValue: 0,
-//   setInputValue: (): void => {
-//     // do nothing
-//   },
-// };
+const propTypes = {
+  inputValue: PropTypes.string.isRequired,
+};
 
 type Props = {
   inputValue: string;
@@ -23,7 +15,7 @@ type Props = {
 const multiplier = process.env.REACT_APP_MULTIPLIER || "1";
 
 // Component that displays N number of block determined by input value times multipler.
-const Multiplier: FunctionComponent<Props> = ({ inputValue }) => {
+const Multiplier: React.SFC<Props> = ({ inputValue }) => {
   const itemsToRender = parseInt(inputValue) * parseInt(multiplier);
 
   return (
@@ -38,7 +30,6 @@ const Multiplier: FunctionComponent<Props> = ({ inputValue }) => {
   );
 };
 
-// Multiplier.propTypes = propTypes;
-// Multiplier.defaultProps = defaultProps;
+Multiplier.propTypes = propTypes;
 
 export default Multiplier;

@@ -1,18 +1,10 @@
-import React, { FunctionComponent } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 import "./Components.scss";
-// import PropTypes from "prop-types";
 
-// const propTypes = {
-//   inputValue: PropTypes.string,
-//   setInputValue: PropTypes.func,
-// };
-
-// const defaultProps = {
-//   inputValue: 0,
-//   setInputValue: (): void => {
-//     // do nothing
-//   },
-// };
+const propTypes = {
+  index: PropTypes.number.isRequired,
+};
 
 type Props = {
   index: number;
@@ -20,16 +12,21 @@ type Props = {
 
 // Component to represent individual square inside the window (Multiplier) view
 // Even rows have a darker background
-const Block: FunctionComponent<Props> = ({ index }) => (
-  <div
-    className={`Multiplier__Block ${
-      (index + 1) % 2 === 0
-        ? "Multiplier__Block--even"
-        : "Multiplier__Block--odd"
-      }`}
-  >
-    {index + 1}
-  </div>
-);
+const Block: React.SFC<Props> = (props) => {
+  const { index } = props;
+  return (
+    <div
+      className={`Multiplier__Block ${
+        (index + 1) % 2 === 0
+          ? "Multiplier__Block--even"
+          : "Multiplier__Block--odd"
+        }`}
+    >
+      {index + 1}
+    </div>
+  );
+};
+
+Block.propTypes = propTypes;
 
 export default Block;
